@@ -7,9 +7,9 @@ public class Car : MonoBehaviour
 {
     // Start is called before the first frame update
     public PathCreator PathCreator;
-
     public float speed = 0.1f;
     float distanceTravelled;
+    private EndOfPathInstruction PathLoop = EndOfPathInstruction.Loop;
 
     void Start()
     {
@@ -28,8 +28,8 @@ public class Car : MonoBehaviour
     void Move()
     {
         distanceTravelled += speed * Time.deltaTime;
-        transform.position = this.PathCreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
-        transform.rotation = this.PathCreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+        transform.position = this.PathCreator.path.GetPointAtDistance(distanceTravelled, PathLoop);
+        transform.rotation = this.PathCreator.path.GetRotationAtDistance(distanceTravelled, PathLoop);
     }
 
     public void ChangeSpeed(float newSpeed)
