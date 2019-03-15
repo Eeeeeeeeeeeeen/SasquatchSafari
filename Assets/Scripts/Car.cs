@@ -31,4 +31,9 @@ public class Car : MonoBehaviour
         transform.position = this.PathCreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
         transform.rotation = this.PathCreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
     }
+
+    public void ChangeSpeed(float newSpeed)
+    {
+        this.speed = newSpeed;
+    }
 }
