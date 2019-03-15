@@ -18,6 +18,7 @@ public class TakePicture : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Fire1")) {
+            EventManager.TriggerEvent("snap");
             ScreenCapture.CaptureScreenshot($"{screenshotFolderPath}{Guid.NewGuid()}.png");
         }
     }
