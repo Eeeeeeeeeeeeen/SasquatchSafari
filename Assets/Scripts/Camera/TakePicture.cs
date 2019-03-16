@@ -14,12 +14,16 @@ public class TakePicture : MonoBehaviour
     PlayerSessionManager playerManager;
     string dataPath;
 
+    public AudioClip camera;
+    AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         var gameManager = GameObject.Find("GameManager");
         playerManager = gameManager.GetComponent<PlayerSessionManager>();
         dataPath = "GameData/";
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,7 @@ public class TakePicture : MonoBehaviour
             PictureCount++;
 
             EventManager.TriggerEvent("snap");
+            source.PlayOneShot(camera);
 
             var score = PictureScorer.instance.CalculateScore();
 
