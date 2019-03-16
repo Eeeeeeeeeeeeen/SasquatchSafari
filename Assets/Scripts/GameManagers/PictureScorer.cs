@@ -49,6 +49,7 @@ public class PictureScorer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(cam.transform.position, transform.TransformDirection(Vector3.forward)* 10, Color.yellow, 10);
 
     }
 
@@ -57,10 +58,17 @@ public class PictureScorer : MonoBehaviour
         var runningScore = 0;
         foreach (BodyPart part in parts)
         {
-            //var cameraPosition = FindCameraPosition(new Vector2(part2D.x, part2D.y));
             if(IsInView(part.gameObject))
             {
-                runningScore += GetBodyPartValue(part.name.ToLower());
+                RaycastHit raycast;
+                if(Physics.Raycast(cam.transform.position, part.transform.position - cam.transform.position, out raycast))
+                {
+                    runningScore += GetBodyPartValue(raycast.collider.name.ToLower());
+                    if(IsCentered(part.gameObject))
+                    {
+                        runningScore += GetBodyPartValue(raycast.collider.name.ToLower());
+                    }
+                }
             }
         }
 
@@ -74,6 +82,16 @@ public class PictureScorer : MonoBehaviour
             return value;
         }
         return 0;
+    }
+
+    bool IsCentered(GameObject gameObject)
+    {
+        var part2D = cam.WorldToViewportPoint(gameObject.transform.position);
+        if ((part2D.x > 0.3 && part2D.x < 0.7) && (part2D.y > 0.3 && part2D.y < 0.7))
+        {
+            return true;
+        }
+        return false;
     }
 
     bool IsInView(GameObject gameObject)
