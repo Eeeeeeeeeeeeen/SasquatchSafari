@@ -30,7 +30,7 @@ namespace PathCreationEditor
         // Display
         const int inspectorSectionSpacing = 10;
         const float constantHandleScale = .01f;
-        const float normalsSpacing = .1f;
+        const float normalsSpacing = 1f;
         GUIStyle boldFoldoutStyle;
 
         // References:

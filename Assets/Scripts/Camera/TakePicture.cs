@@ -7,8 +7,13 @@ using System.IO;
 
 public class TakePicture : MonoBehaviour
 {
+    string screenshotFolderPath;
+    public int PictureLimit = 10;
+    public int PictureCount = 0;
+
     PlayerSessionManager playerManager;
     string dataPath;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +25,10 @@ public class TakePicture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1")) {
+        if (PictureCount < PictureLimit && Input.GetButtonDown("Fire1"))
+        {
+            PictureCount++;
+
             var score = PictureScorer.instance.CalculateScore();
 
             var pictureLocation = $"{playerManager.ScreenshotFolderPath}{Guid.NewGuid()}.png";
@@ -32,7 +40,7 @@ public class TakePicture : MonoBehaviour
             playerManager.playerGallery.Pictures.Add(pictureData);
         }
 
-        if(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             SaveGameData();
         }
