@@ -1259,6 +1259,17 @@ ModelImporter:
     102506: transform97
     102508: transform98
     102510: transform99
+    102512: Backdrop
+    102514: Backdrop1
+    102516: Backdrop2
+    102518: Backdrop3
+    102520: Backdrop4
+    102522: Backdrop5
+    102524: Backdrop6
+    102526: Backdrop7
+    102528: Backdrop8
+    102530: polySurface170
+    102532: polySurface171
     400000: Bridge
     400002: Bridge1
     400004: Building
@@ -2515,6 +2526,17 @@ ModelImporter:
     402506: transform97
     402508: transform98
     402510: transform99
+    402512: Backdrop
+    402514: Backdrop1
+    402516: Backdrop2
+    402518: Backdrop3
+    402520: Backdrop4
+    402522: Backdrop5
+    402524: Backdrop6
+    402526: Backdrop7
+    402528: Backdrop8
+    402530: polySurface170
+    402532: polySurface171
     2000000: Game_Proxy
     2100000: Tree_MAT
     2100002: Road_MAT
@@ -3568,6 +3590,17 @@ ModelImporter:
     2302078: Spruce_yellow29
     2302080: Spruce_yellow30
     2302082: Spruce_yellow32
+    2302084: Backdrop
+    2302086: Backdrop1
+    2302088: Backdrop2
+    2302090: Backdrop3
+    2302092: Backdrop4
+    2302094: Backdrop5
+    2302096: Backdrop6
+    2302098: Backdrop7
+    2302100: Backdrop8
+    2302102: polySurface170
+    2302104: polySurface171
     3300000: Bridge
     3300002: Bridge1
     3300004: Building
@@ -4610,6 +4643,17 @@ ModelImporter:
     3302078: Spruce_yellow29
     3302080: Spruce_yellow30
     3302082: Spruce_yellow32
+    3302084: Backdrop
+    3302086: Backdrop1
+    3302088: Backdrop2
+    3302090: Backdrop3
+    3302092: Backdrop4
+    3302094: Backdrop5
+    3302096: Backdrop6
+    3302098: Backdrop7
+    3302100: Backdrop8
+    3302102: polySurface170
+    3302104: polySurface171
     4300000: Tree7
     4300002: Tree5
     4300004: Tree8
@@ -5652,6 +5696,17 @@ ModelImporter:
     4302078: polySurface188
     4302080: Spruce_pink10
     4302082: Spruce_yellow32
+    4302084: polySurface170
+    4302086: polySurface171
+    4302088: Backdrop4
+    4302090: Backdrop3
+    4302092: Backdrop2
+    4302094: Backdrop1
+    4302096: Backdrop
+    4302098: Backdrop5
+    4302100: Backdrop6
+    4302102: Backdrop7
+    4302104: Backdrop8
     2186277476908879412: ImportLogs
   externalObjects:
   - first:
