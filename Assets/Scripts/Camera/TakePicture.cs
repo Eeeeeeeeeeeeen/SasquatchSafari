@@ -29,6 +29,8 @@ public class TakePicture : MonoBehaviour
         {
             PictureCount++;
 
+            EventManager.TriggerEvent("snap");
+
             var score = PictureScorer.instance.CalculateScore();
 
             var pictureLocation = $"{playerManager.ScreenshotFolderPath}{Guid.NewGuid()}.png";
