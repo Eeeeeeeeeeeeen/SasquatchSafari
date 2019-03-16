@@ -48,7 +48,7 @@ public class TakePicture : MonoBehaviour
 
     private void SaveGameData()
     {
-        string dataAsJson = JsonUtility.ToJson(playerManager);
+        string dataAsJson = JsonUtility.ToJson(playerManager.playerGallery);
         Directory.CreateDirectory(dataPath);
 
         string filePath = dataPath + "/" + playerManager.PlayerSession + ".json";
