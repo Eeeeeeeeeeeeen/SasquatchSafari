@@ -32,4 +32,4 @@ MonoBehaviour:
   vertexPath: {r: 1, g: 1, b: 1, a: 1}
   vertex: {r: 0, g: 0, b: 0, a: 1}
   normals: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  normalsLength: 0.26
+  normalsLength: 1
