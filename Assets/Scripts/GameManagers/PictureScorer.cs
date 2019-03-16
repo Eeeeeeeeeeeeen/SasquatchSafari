@@ -43,17 +43,15 @@ public class PictureScorer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.StartListening("snap", CalculateScore);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(cam.transform.position, transform.TransformDirection(Vector3.forward)* 10, Color.yellow, 10);
 
     }
 
-    void CalculateScore()
+    public int CalculateScore()
     {
         var runningScore = 0;
         foreach (BodyPart part in parts)
@@ -71,8 +69,7 @@ public class PictureScorer : MonoBehaviour
                 }
             }
         }
-
-        print(runningScore);
+        return runningScore;
     }
     
     int GetBodyPartValue(string partName)
