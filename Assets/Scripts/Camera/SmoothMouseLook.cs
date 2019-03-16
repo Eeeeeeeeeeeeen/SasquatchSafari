@@ -40,6 +40,10 @@ public class SmoothMouseLook : MonoBehaviour
             rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
             rotationX += Input.GetAxis("Mouse X") * sensitivityX;
 
+            var rotY = rotationY % 360;
+
+            rotationY = ClampAngle(rotY, minimumY, maximumY);
+
             rotArrayY.Add(rotationY);
             rotArrayX.Add(rotationX);
 
@@ -131,7 +135,7 @@ public class SmoothMouseLook : MonoBehaviour
     public static float ClampAngle(float angle, float min, float max)
     {
         angle = angle % 360;
-        if ((angle >= -360F) && (angle <= 360F))
+        if ((angle >= 360F) || (angle <= -360F))
         {
             if (angle < -360F)
             {
