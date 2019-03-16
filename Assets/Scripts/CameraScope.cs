@@ -76,6 +76,7 @@ public class CameraScope : MonoBehaviour
         IsScopedIn = true;
         PlayerCamera.enabled = false;
         Cam2000Camera.enabled = true;
+
     }
 
 
