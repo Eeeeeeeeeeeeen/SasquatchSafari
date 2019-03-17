@@ -14,6 +14,7 @@ public class CameraUI : MonoBehaviour
     {
         pictureTaker = GameObject.Find("Main Camera").GetComponent<TakePicture>();
         EventManager.StartListening("snap", PictureTaken);
+        EventManager.StartListening("snap-fin", ScopeIn);
         EventManager.StartListening("scope-out", ScopeOut);
         EventManager.StartListening("scope-in-end", ScopeIn);
         canvas = GetComponent<Canvas>();
@@ -35,6 +36,7 @@ public class CameraUI : MonoBehaviour
 
     void PictureTaken()
     {
+        ScopeOut();
         UpdatePhotoCount();
     }
 
