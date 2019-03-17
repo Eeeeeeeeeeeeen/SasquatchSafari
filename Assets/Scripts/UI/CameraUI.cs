@@ -21,7 +21,7 @@ public class CameraUI : MonoBehaviour
 
         canvas.enabled = false;
         UpdatePhotoCount();
-        // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void ScopeIn()

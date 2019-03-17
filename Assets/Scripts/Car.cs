@@ -19,6 +19,7 @@ public class Car : MonoBehaviour
             throw new System.ArgumentException("No path set up!");
         }
         distanceTravelled = startLocation;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

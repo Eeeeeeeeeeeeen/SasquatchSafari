@@ -9,4 +9,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(sceneName);
     }
+
+    public void SetCameraLock(bool state)
+    {
+        Cursor.lockState = state ? CursorLockMode.Locked : CursorLockMode.None;
+    }
 }
