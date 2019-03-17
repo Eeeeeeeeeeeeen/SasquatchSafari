@@ -12,7 +12,7 @@ public class CameraUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pictureTaker = GameObject.Find("GameManager").GetComponent<TakePicture>();
+        pictureTaker = GameObject.Find("Main Camera").GetComponent<TakePicture>();
         EventManager.StartListening("snap", PictureTaken);
         EventManager.StartListening("scope-out", ScopeOut);
         EventManager.StartListening("scope-in-end", ScopeIn);
@@ -20,7 +20,7 @@ public class CameraUI : MonoBehaviour
 
         canvas.enabled = false;
         UpdatePhotoCount();
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.lockState = CursorLockMode.Locked;
     }
 
     void ScopeIn()

@@ -16,6 +16,7 @@ public class TakePicture : MonoBehaviour
 
     public AudioClip camera;
     AudioSource source;
+    private bool isScoped = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,14 @@ public class TakePicture : MonoBehaviour
         playerManager = gameManager.GetComponent<PlayerSessionManager>();
         dataPath = "GameData/";
         source = GetComponent<AudioSource>();
+        EventManager.StartListening("scope-out", () => this.isScoped = false);
+        EventManager.StartListening("scope-in-end", () => this.isScoped = true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PictureCount < PictureLimit && Input.GetButtonDown("Fire1"))
+        if (PictureCount < PictureLimit && Input.GetButtonDown("Fire1") && isScoped)
         {
             PictureCount++;
 
