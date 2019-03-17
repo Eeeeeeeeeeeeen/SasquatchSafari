@@ -7,6 +7,7 @@ public class Car : MonoBehaviour
 {
     // Start is called before the first frame update
     public PathCreator PathCreator;
+    public float startLocation = 0f;
     public float speed = 0.1f;
     float distanceTravelled;
     private EndOfPathInstruction PathLoop = EndOfPathInstruction.Loop;
@@ -17,6 +18,7 @@ public class Car : MonoBehaviour
         {
             throw new System.ArgumentException("No path set up!");
         }
+        distanceTravelled = startLocation;
     }
 
     // Update is called once per frame
