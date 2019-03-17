@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Kyle.unity
     guid: d2b2bde8af03c8543bf860bf64f7fd83
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 35e7a3bd7c1496044b2f7264793c4463
+    path: Assets/Scenes/EndScreen.unity
+    guid: 07f2d751254b23d4a83ec0986f7549a3
   m_configObjects: {}
