@@ -34,20 +34,7 @@ public class TakePicture : MonoBehaviour
     {
         if (PictureCount < PictureLimit && Input.GetButtonDown("Fire1") && isScoped)
         {
-            PictureCount++;
-
-            EventManager.TriggerEvent("snap");
-            source.PlayOneShot(camera);
-
-            var score = PictureScorer.instance.CalculateScore();
-
-            var pictureLocation = $"{playerManager.ScreenshotFolderPath}{Guid.NewGuid()}.png";
-
-            ScreenCapture.CaptureScreenshot(pictureLocation);
-
-            var pictureData = new PictureModel() { PictureLocation = pictureLocation, Score = score };
-
-            playerManager.playerGallery.Pictures.Add(pictureData);
+            OnClickScreenCaptureButton();
         }
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -64,5 +51,34 @@ public class TakePicture : MonoBehaviour
         string filePath = dataPath + "/" + playerManager.PlayerSession + ".json";
         File.WriteAllText(filePath, dataAsJson);
 
+    }
+
+    public void OnClickScreenCaptureButton()
+    {
+        StartCoroutine(CaptureScreen());
+    }
+
+    public IEnumerator CaptureScreen()
+    {
+
+        PictureCount++;
+
+        EventManager.TriggerEvent("snap");
+
+        source.PlayOneShot(camera);
+        yield return new WaitForEndOfFrame();
+
+        var score = PictureScorer.instance.CalculateScore();
+
+        var pictureLocation = $"{playerManager.ScreenshotFolderPath}{Guid.NewGuid()}.png";
+
+        ScreenCapture.CaptureScreenshot(pictureLocation);
+
+        var pictureData = new PictureModel() { PictureLocation = pictureLocation, Score = score };
+
+        playerManager.playerGallery.Pictures.Add(pictureData);
+
+
+        EventManager.TriggerEvent("snap-fin");
     }
 }
