@@ -43,7 +43,7 @@ public class TakePicture : MonoBehaviour
         }
     }
 
-    private void SaveGameData()
+    public void SaveGameData()
     {
         string dataAsJson = JsonUtility.ToJson(playerManager.playerGallery);
         Directory.CreateDirectory(dataPath);
