@@ -16,6 +16,8 @@ public class PlayerSessionManager : MonoBehaviour
     void Start()
     {
         PlayerSession = Guid.NewGuid();
+        PlayerPrefs.SetString("username", PlayerSession.ToString());
+        PlayerPrefs.Save();
         ScreenshotFolderPath = $"Screenshots/{PlayerSession.ToString()}/";
 
         playerGallery = new PlayerGallery(PlayerSession.ToString());
