@@ -69,8 +69,9 @@ public class TakePicture : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         var score = PictureScorer.instance.CalculateScore();
-
-        var pictureLocation = $"{playerManager.ScreenshotFolderPath}{Guid.NewGuid()}.png";
+    
+        string fullPath = Path.GetFullPath("Screenshots\\");
+        var pictureLocation = $"{fullPath}{Guid.NewGuid()}.png";
 
         ScreenCapture.CaptureScreenshot(pictureLocation);
 
