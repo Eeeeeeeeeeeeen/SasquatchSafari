@@ -66,7 +66,7 @@ Material:
     - _BumpScale: 1
     - _Contrast: 0
     - _Cull: 2
-    - _Cutoff: 0.616
+    - _Cutoff: 0.892
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -77,6 +77,10 @@ Material:
     - _Occlusion: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ShakeBending: 1
+    - _ShakeDisplacement: 0.537
+    - _ShakeTime: 0.201
+    - _ShakeWindspeed: 0.359
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SquashAmount: 1
@@ -84,22 +88,22 @@ Material:
     - _UVSec: 0
     - _WindQuality: 2
     - _ZWrite: 1
-    - _b_influence: 1
+    - _b_influence: 0
     - _branches_disp: 0
-    - _leaves_wiggle_disp: 0
-    - _leaves_wiggle_speed: 1.98
+    - _leaves_wiggle_disp: 17.52
+    - _leaves_wiggle_speed: -6.82
     - _r_influence: 0
-    - _tree_sway_disp: 0.236
-    - _tree_sway_speed: 0.93
-    - _tree_sway_stutter: 0.59
-    - _tree_sway_stutter_influence: 1
-    - _wind_size: 23.8
+    - _tree_sway_disp: 0.034
+    - _tree_sway_speed: 4.68
+    - _tree_sway_stutter: 2.41
+    - _tree_sway_stutter_influence: 0
+    - _wind_size: 16.1
     m_Colors:
-    - _Color: {r: 0.5943396, g: 0.5242524, b: 0.5242524, a: 1}
+    - _Color: {r: 0.8207547, g: 0.12001601, b: 0.12001601, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
-    - _Tint: {r: 0.9150943, g: 0.86584437, b: 0.7208526, a: 1}
+    - _Tint: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
     - _TintColour: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0, g: 0, b: 7.34, a: 0}
+    - _wind_dir: {r: 0, g: 0, b: 0, a: 0}
